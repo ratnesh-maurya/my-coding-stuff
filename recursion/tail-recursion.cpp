@@ -1,3 +1,10 @@
+/*
+   Tail-Recursion
+code by @ratnesh maurya
+     13/10/2022
+
+*/
+
 #include <stdio.h>
 void fun(int n)
     {

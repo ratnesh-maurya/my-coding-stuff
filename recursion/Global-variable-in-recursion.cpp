@@ -1,3 +1,9 @@
+/*
+     Global variable in recursion
+    code by @ratnesh maurya
+     13/10/2022
+
+*/
 #include <stdio.h>
     int x=0;
     int fun(int n)
