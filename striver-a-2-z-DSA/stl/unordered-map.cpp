@@ -1,37 +1,38 @@
 #include<bits/stdc++.h>
 
 using namespace std;
+//unordered_map in STL are associative containers where each element consists of a key value and a mapped value. 
+//Two mapped values cannot have the same key value. The elements can be in any order.
 
 int main() {
-  unordered_set < int > s;
-  for (int i = 1; i <= 10; i++) 
-  {
-    s.insert(i);
+  unordered_map < int, int > mp;
+   for (int i = 1; i <= 5; i++) {
+    mp.insert({ i , i * 10});
   }
 
-  cout << "Elements present in the unordered set: ";
-  
-  for (auto it = s.begin(); it != s.end(); it++) {
-    cout << * it << " ";
+  cout << "Elements present in the map: " << endl;
+  cout << "Key\tElement" << endl;
+  for (auto it = mp.begin(); it != mp.end(); it++) {
+    cout << it -> first << "\t" << it -> second << endl;
   }
-  cout << endl;
+
   int n = 2;
-  if (s.find(2) != s.end())
-    cout << n << " is present in unordered set" << endl;
+  if (mp.find(2) != mp.end())
+    cout << n << " is present in map" << endl;
 
-  s.erase(s.begin());
-  cout << "Elements after deleting the first element: ";
-  for (auto it = s.begin(); it != s.end(); it++) {
-    cout << * it << " ";
+  mp.erase(mp.begin());
+  cout << "Elements after deleting the first element: " << endl;
+  cout << "Key\tElement" << endl;
+  for (auto it = mp.begin(); it != mp.end(); it++) {
+    cout << it -> first << "\t" << it -> second << endl;
   }
-  cout << endl;
 
-  cout << "The size of the unordered set is: " << s.size() << endl;
+  cout << "The size of the map is: " << mp.size() << endl;
 
-  if (s.empty() == false)
-    cout << "The unordered set is not empty " << endl;
+  if (mp.empty() == false)
+    cout << "The map is not empty " << endl;
   else
-    cout << "The unordered set is empty" << endl;
-  s.clear();
-  cout << "Size of the unordered set after clearing all the elements: " << s.size();
+    cout << "The map is empty" << endl;
+  mp.clear();
+  cout << "Size of the set after clearing all the elements: " << mp.size();
 }
