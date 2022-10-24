@@ -4,11 +4,13 @@ using namespace std;
 
 int main() {
   unordered_set < int > s;
-  for (int i = 1; i <= 10; i++) {
+  for (int i = 1; i <= 10; i++) 
+  {
     s.insert(i);
   }
 
   cout << "Elements present in the unordered set: ";
+  
   for (auto it = s.begin(); it != s.end(); it++) {
     cout << * it << " ";
   }
