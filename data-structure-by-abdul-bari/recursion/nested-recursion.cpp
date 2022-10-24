@@ -14,7 +14,7 @@
 int main()
     {
     int r;
-    r=fun(95);
+    r=fun(65);
         printf("%d\n",r);
         return 0;
     }
