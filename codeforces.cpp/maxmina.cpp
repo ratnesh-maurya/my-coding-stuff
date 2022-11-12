@@ -1,53 +1,66 @@
-/*
-  maxmina
-  code by @ratnesh maurya
-  15/10/2022
-*/
-#include<bits/stdc++.h>
+
+//(????)? ? RATNESH ?
+
+#include <bits/stdc++.h>
+#define int long long int
+#define f(i, n) for (int i = 0; i < n; i++)
+#define I cin >>
+#define O cout <<
+#define fast                          \
+    ios_base::sync_with_stdio(false); \
+    cin.tie(NULL);
+
 using namespace std;
  
- 
-int main()
+void solve()
 {
-    #ifndef ONLINE_JUDGE
+   int n;
+   int count=0;
+   I n;
+   int A[n];
+  for (int i = 0; i < n; i++)
+   {
+       I A[i];
+   }
+      for (int i = 0; i <= n; i++)
+      {
+          if(A[i]==A[i+1])
+          {
+              count++;
+              if(count==1)
+              {
+                 
+              break;
+              
+              }
+          }
+      }
+      if(count==1)
+              {
+                cout<<"YES"<<endl; 
+              }
+              else
+              {
+                  cout<<"NO"<<endl;
+              }
+
+//code here
+
+}
+
+int32_t main()
+{
+#ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
-    #endif
-    int t;
-    cin >> t;
-    while(t--)
+#endif
+    fast
+    int tc;
+    scanf("%d", &tc);
+    while (tc--)
     {
-        int n, k;
-        cin >> n >> k;
-        int A[n];
-        int count = 0;
-        for (int i = 0; i < n;i++)
-        {
-            cin >> A[i];
-            if(A[i]==1)
-            {
-                count++;
-                
-            }
-        }
-        if(n>k && count>0)
-        {
-            cout << "YES" << endl;
-        }
-        else if(count==0)
-        {
-            cout << "NO" << endl;
-        }
-        else if(n<=k && count>0)
-        {
-            cout << "YES" << endl;
-        }
-        else
-        {
-            cout << "NO" << endl;
-        }
-
+        solve();
+        O endl;
     }
-
     return 0;
 }

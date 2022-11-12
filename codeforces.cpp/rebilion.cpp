@@ -3,9 +3,9 @@
 #define f0(i, n) for (int i = 0; i < n; i++)
 #define I cin >>
 #define O cout <<
-#define fast                          \
-    ios_base::sync_with_stdio(false); \
-    cin.tie(NULL);
+#define fast
+
+    
 // max(a,b)
 // pow(A,b)
 // int n = sizeof(arr) / sizeof(arr[0]);//
@@ -19,29 +19,42 @@ using namespace std;
   
 void solve()
 {
-    int n;
-    I n;
-    int A[n];
-    for (int i = 0; i < n;i++)
-    {
-        I A[i];
-    }
+     ll n;
+        cin >> n;
+        string s;
+        ll count = 1;
+        ll counti=0;
+        ll count0=0;
+        ll count1=0;
+        cin >> s;
+        for (ll i = 0; i < n;i++)
+        {
+            if(s[i]==s[i+1])
+            {
+                count++;
+            }
+            else
+            {
+                counti = max(counti, count);
+                count = 1;
+            }
+        }
+        counti = max(counti, count);
+        for (ll i = 0; i < n;i++)
+        {
+            if(s[i]=='0')
+            {
+                count0++;
+            }
+            else
+            {
+                count1++;
+            }
+        }
+        //cout << counti <<" " << count0 << " " << count1 << endl;
+        cout << max((counti * counti), (count0 * count1)) << endl;
 
-    int i = 0, j = n - 1;
-    int count = 0;
-    while(i<j)
-    {
-        while(i<n && A[i]==0)
-            i++;
-            while(j>=0 && A[j]==1)
-                j--;
-                if(i<j)
-                    count++;
-
-                i++;
-                j--;
-    }
-    cout << count;
+       
 }
 
 int main()
@@ -50,13 +63,13 @@ int main()
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 #endif
-    fast
+    
         ll tc;
     I tc;
     while (tc--)
     {
         solve();
-        O endl;
+        
     }
     return 0;
 }

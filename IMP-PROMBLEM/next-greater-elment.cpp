@@ -1,7 +1,10 @@
 
 //503. Next Greater Element II
 //leetcode
-#include <bits/stdc++.h>
+
+
+
+/*
 
 
 class Solution {
@@ -33,3 +36,4 @@ public:
         
     }
 };
+*/
