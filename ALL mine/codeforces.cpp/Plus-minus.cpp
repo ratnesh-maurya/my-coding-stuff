@@ -16,32 +16,20 @@ using namespace std;
 
 void solve()
 {
-    int k, n;
-    I k>>n;
-    int ans[k];
-        for(int i=0;i<k;i++)
-       {
-          ans[i] = i+1;
-       }
-       for (int i = 0; i < k;i++)
-       {
-               if(ans[k-i-1]<n && ans[k-i-2]<n-i)
-               {
-                   ans[k - i-1 ] = n;
-                   n = n - i-1;
-               }
-             
-       }
-
-          sort(ans, ans + k);
-          if(ans[k-1]==ans[k-2])
-          {
-               ans[k - 2] = ans[k - 3] + 1;
-          }
-       for (auto x : ans)
-          cout << x << " ";
-       
- 
+ int n;
+        cin >> n;
+        string s;
+        cin >> s;
+        int parity = 1;
+        for (int i = 1; i < n; ++i) {
+            if (s[i] == '1') {
+                cout << (parity ? '-' : '+');
+                parity ^= 1;
+            } else {
+                cout << '+';
+            }
+        }
+        cout << '\n';
    
 }
 
