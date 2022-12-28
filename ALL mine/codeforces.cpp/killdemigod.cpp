@@ -16,7 +16,20 @@ using namespace std;
 
 void solve()
 {
-    O "jai";
+    ll n;
+    I n;
+
+    ll ans = 0;
+    ans += ((n) * (n + 1) * ((2 * n) + 1)) / 6;
+    ans = ans % (1000000007);
+    n = n - 1;
+   ans += ((n) * (n + 1) * ((2 * n) + 1)) / 6;
+   ans = ans % (1000000007);
+   ans += ((n) * (n + 1)) / 2;
+   ans = ans % (1000000007);
+   //ans = ans % (1000000007);
+   ans = ans * 2022;
+   O ans % (1000000007);
 }
 
 int main()

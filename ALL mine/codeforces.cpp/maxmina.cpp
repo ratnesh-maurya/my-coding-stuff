@@ -51,8 +51,8 @@ void solve()
 int32_t main()
 {
 #ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
+    freopen("dena.txt", "r", stdin);
+    freopen("le_ye_le.txt", "w", stdout);
 #endif
     fast
     int tc;

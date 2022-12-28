@@ -16,7 +16,17 @@ using namespace std;
 
 void solve()
 {
-    O "jai";
+    int n;
+    I n;
+    ll A[n];
+    ll sum = 1;
+    FOR(i,n)
+    {
+        I A[i];
+        sum = sum * A[i];
+    }
+    sum = sum + n - 1;
+    cout << sum * 2022;
 }
 
 int main()
