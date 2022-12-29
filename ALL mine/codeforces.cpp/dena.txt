@@ -1,5 +1,11 @@
+5
+1
+a
 4
-2
+down
+10
+codeforces
 3
-50
-1000000000
+bcf
+5
+zzzzz
