@@ -20,7 +20,21 @@ using namespace std;
   
 void solve()
 {
-   
+   string s;
+   I s;
+   int n=s.size();
+   int store=-1;
+   int ans=0;
+   for(int i=0;i<n;i++)
+   {
+     if(s[i]=='a' &&s[i+1]=='m' && s[i+2]=='a' &&s[i+3]=='n') 
+     {
+       
+       ans=ans +  (n-4-i+1)+ (i-store-1)*(n-i-3);
+       store=i;
+     }
+   }
+   O ans;
 }
 
 int main()

@@ -20,7 +20,16 @@ using namespace std;
   
 void solve()
 {
-   
+   string s;
+   I s;
+   int res=0;
+  int n=s.size();
+  FOR(i,n/2)
+  {
+    res=res+abs(int(s[i]-int(s[n-1-i])));
+    
+  }
+  O res;
 }
 
 int main()
