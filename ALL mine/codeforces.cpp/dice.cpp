@@ -20,24 +20,24 @@ using namespace std;
   
 void solve()
 {
-    string s;
-    I s;
-    string b = "314159265358979323846264338327";
-    int n = s.size();
-    int count = 0;
-    FOR(i,n)
+    int n, s, r;
+    int res[n];
+    I n >> s >> r;
+    int remove = s - r;
+    res[0] = remove;
+
+    
+    int push = r / (n - 1);
+    for (int i = 0; i < n - 1;i++)
     {
-        if(s[i]==b[i])
-        {
-            count++;
-        }
-        else
-        {
-            break;
-        }
+        res[i + 1] = push;
         
     }
-    O count;
+    res[n - 1] = r - (push * (n - 2));
+    FOR(i,n)
+    {
+        O res[i]<<" ";
+    }
 }
 
 int main()
