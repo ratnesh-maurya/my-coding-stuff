@@ -17,33 +17,32 @@ typedef long long ll;
 using namespace std;
 
 
-  
 void solve()
 {
-    int n;
-    I n;
-    int a[n];
-    FOR(i,n)
-    {
-        I a[i];
+  int N, c;
+  I N>> c;
+  int arr[c];
+
+  vi v;
+  for (int i = 0; i < N; i++) 
+  {
+    cin >>v[i];
+  }
+  for (int i = 0; i < N; i++)
+  {
+    v[i] += i + 1;
+  }
+
+  SORT(v);
+  int i;
+  for (i = 0; i < N; i++)
+  {
+      if (c >=v[i])
+          c -=v[i];
+      else
+          break;
     }
-    int count=0;
-    vi v;
-    int sum=0;
-    FOR(i,n)
-    {
-        v.pb(abs(a[i]));
-        if(a[i]<0)
-        {
-            count++;
-        }
-        sum+=abs(a[i]);
-    }
-    SORT(v);
-    if(count%2==0){cout<<sum;}
-    else{
-        cout<<sum-2*v[0];
-    }
+cout << i << endl;
 
 }
 
