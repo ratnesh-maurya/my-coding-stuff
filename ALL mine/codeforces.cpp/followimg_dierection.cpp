@@ -25,6 +25,38 @@ void solve()
     string s;
     I s;
 
+    int x = 0;
+    int y = 0;
+    int p = 1;
+    for (int i = 0; i < n;i++)
+    {
+        if(s[i]=='L')
+        {
+            x = x - 1;
+        }
+         if(s[i]=='R')
+        {
+            x = x +1;
+        }
+         if(s[i]=='D')
+        {
+            y = y - 1;
+        }
+        if(s[i]=='U')
+        {
+            y = y +1;
+        }
+        if(x==1 and y==1)
+        { p = 0;
+            O "YES";
+            break;
+        }
+        
+    }
+    if(p==1)
+        {
+            O "NO";
+        }
 }
 
 int main()

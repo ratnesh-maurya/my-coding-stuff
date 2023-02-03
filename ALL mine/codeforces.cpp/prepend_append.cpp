@@ -22,8 +22,22 @@ void solve()
 {
     int n;
     I n;
+    int x=-1;
     string s;
     I s;
+    FOR(i,n/2){
+        if(s[i]==s[n-1-i])
+        {
+            x=i;
+            break;
+            }
+    }
+    if(x==-1){
+        if(n%2==1){cout<<1;}
+        else{cout<<0;}
+        return;
+    }
+    cout<<n-2*x;
 
 }
 
