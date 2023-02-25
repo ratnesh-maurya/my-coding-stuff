@@ -1,64 +1,46 @@
-#include <bits/stdc++.h>
-typedef long long ll;
-#define FOR(i,n) for (int i = 0; i < n; i++)
-#define I cin >>
-#define O cout <<
-
-#define SORT(v) sort((v).begin(),(v).end())
-#define pb push_back
-#define vi vector<int>
-#define mii map<int, int>
-#define si set<int>
-#define all(p) p.begin(), p.end()
-#define fast                          \
-    ios_base::sync_with_stdio(false); \
-    cin.tie(NULL);
-
-using namespace std;
-
-
-void solve()
-{
-  int N, c;
-  I N>> c;
-  int arr[c];
-
-  vi v;
-  for (int i = 0; i < N; i++) 
-  {
-    cin >>v[i];
-  }
-  for (int i = 0; i < N; i++)
-  {
-    v[i] += i + 1;
-  }
-
-  SORT(v);
-  int i;
-  for (i = 0; i < N; i++)
-  {
-      if (c >=v[i])
-          c -=v[i];
-      else
-          break;
+class Solution {
+public:
+    
+    int func(vector<int> &a, int k, int i, vector<int> &number){
+        if(i>=a.size()){
+            return 0;
+        }
+    if(number[i]!=-1){
+        return number[i];
     }
-cout << i << endl;
-
-}
-
-int main()
-{
-#ifndef ONLINE_JUDGE
-    freopen("dena.txt", "r", stdin);
-    freopen("le_ye_le.txt", "w", stdout);
-#endif
-    fast
-        ll tc;
-    I tc;
-    while (tc--)
-    {
-        solve();
-        O endl;
+        int mau=0;
+        int nt=func(a,k,i+1,number);
+        
+        if(a[i]<=k){
+            return number[i]= max(func(a,k,i+2,number)+1,nt);
+        }
+        return number[i]= nt;
     }
-    return 0;
-}
+    
+    bool hk(vector<int> &a, int k, int req){
+        vector<int> number(a.size());
+        for(int i=0;i<a.size();i++){
+            number[i]=-1;
+        }
+        int maxi=func(a,k,0,number);
+        //cout<<k<<" "<<maxi<<" "<<(maxi>=k)<<endl;
+        return maxi>=req;
+    }
+    
+    int minCapability(vector<int>& n, int k) {
+        int s=0;
+        int e=1000000000;
+        while(s+1<e){
+            int m=s+(e-s)/2;
+            if(hk(n,m,k)){
+                e=m;
+            }
+            else{
+                s=m;
+            }
+            
+        }
+        
+        return e;
+    }
+};
