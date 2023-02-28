@@ -1,32 +1,28 @@
-#include <iostream>
-#include <vector>
-
+#include<bits/stdc++.h>
 using namespace std;
+void printF(int ind,vector<int> &ds,int arr[],int n)
+{
+	if(ind == n)
+	{
+		for(auto i:ds)
+		{
+		cout<<i<<" ";
+		}
+        
+		cout<<endl;
+		return;
+	}
 
-void segregate_rgb(vector<char>& arr) {
-    int low = 0, mid = 0, high = arr.size()-1;
-    while (mid <= high) {
-        if (arr[mid] == 'R') {
-            swap(arr[low], arr[mid]);
-            low++;
-            mid++;
-        }
-        else if (arr[mid] == 'G') {
-            mid++;
-        }
-        else { // arr[mid] == 'B'
-            swap(arr[mid], arr[high]);
-            high--;
-        }
-    }
+	ds.push_back(arr[ind]);
+	printF(ind+1,ds,arr,n);
+	ds.pop_back();
+	printF(ind+1,ds,arr,n);
+	
 }
-
-int main() {
-    vector<char> arr { 'B', 'R', 'G','G', 'B', 'R', 'R'};
-    segregate_rgb(arr);
-    for (char c : arr) {
-        cout << c << " ";
-    }
-    cout << endl;
-    return 0;
+int main()
+{
+	int arr[]={3,2,1};
+	int n=3;
+	vector<int>ds;
+	printF(0,ds,arr,n);
 }
