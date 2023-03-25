@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 typedef long long ll;
-#define FOR(i,n) for (int i = 0; i < n; i++)
+
 #define I cin >>
 #define O cout <<
 
@@ -20,7 +20,34 @@ using namespace std;
 
 void solve()
 {
-  
+    int N;
+    cin >> N;
+    string s;
+    I s;
+int flag = 0;
+    for (int i = 0; i < N; i++)
+    {
+        for (int j = i; j < N;j++)
+        {
+            if ((s[j] == s[i])&&(j-i+1)%2==0)
+            {
+               
+                     flag = 1;
+            }
+        }
+        if(flag ==1)
+        {
+            break;
+        }
+    }
+    if(flag ==1)
+    {
+        O "NO" << next;
+    }
+    else
+    {
+        O "YES" << next;
+    }
 }
 
 int main()

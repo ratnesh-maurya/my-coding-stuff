@@ -20,8 +20,37 @@ using namespace std;
 
 void solve()
 {
-  
+    
+   int n,q;
+    cin >> n>>q;
+    int prefix[n];
+    int sum=0;
+    int sumbd = 0;
+    int ram = 0;
+    for (int i = 0; i < n; i++)
+    {
+        cin>>prefix[i];
+        sum+=prefix[i];
+    }
+    int  fix[n];
+    fix[0]=prefix[0];
+    for(int i=1;i<n;i++){
+       fix[i]=prefix[i]+fix[i-1];
+    }
+   
+    for(int i=0;i<q;i++){
+        int left,right,r;
+        cin>>left>>right>>r;
+          int sum1=fix[right-1]-(fix[left-1]-fix[left-1]);
+        int sum2=sum-sum1+(right-left+1)*r;
+        if(sum2%2==1)  {cout<<"YES"<<endl;} else  {cout<<"NO"<<endl;}
+    }
+    int rm = 0;
 }
+
+
+
+
 
 int main()
 {
@@ -35,7 +64,7 @@ int main()
     while (tc--)
     {
         solve();
-        O endl;
+        
     }
     return 0;
 }

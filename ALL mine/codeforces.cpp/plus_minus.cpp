@@ -20,7 +20,16 @@ using namespace std;
 
 void solve()
 {
-  
+    int a, b, c;
+    I a >> b >> c;
+    if(a+b==c)
+    {
+        O "+" << next;
+    }
+    else
+    {
+        O "-" << next;
+    }
 }
 
 int main()

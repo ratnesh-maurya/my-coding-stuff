@@ -20,7 +20,35 @@ using namespace std;
 
 void solve()
 {
-  
+    int n;
+    I n;
+    vi v;
+    int even = 0;
+    int odd = 0;
+    FOR(i,n)
+    {
+        int a;
+        I a;
+        v.pb(a);
+        if(a %2==0)
+        {
+            even = even + a;
+        }
+        else
+        {
+            odd = odd + a;
+        }
+    }
+    if(even>odd)
+    {
+        O "yes" << next;
+    }
+    else
+    {
+        O "no" << next;
+    }
+
+    
 }
 
 int main()
