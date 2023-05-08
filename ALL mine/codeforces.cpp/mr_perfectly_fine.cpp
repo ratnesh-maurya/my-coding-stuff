@@ -1,10 +1,10 @@
 #include <bits/stdc++.h>
 typedef long long ll;
-#define FOR(i, n) for (int i = 0; i < n; i++)
+#define FOR(i,n) for (int i = 0; i < n; i++)
 #define I cin >>
 #define O cout <<
 
-#define SORT(v) sort((v).begin(), (v).end())
+#define SORT(v) sort((v).begin(),(v).end())
 #define pb emplace_back
 #define vi vector<int>
 #define mii map<int, int>
@@ -17,8 +17,10 @@ typedef long long ll;
 
 using namespace std;
 
+
 void solve()
 {
+  
 }
 
 int main()
