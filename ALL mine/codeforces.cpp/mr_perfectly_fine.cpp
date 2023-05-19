@@ -1,41 +1,42 @@
-#include <bits/stdc++.h>
-typedef long long ll;
-#define FOR(i,n) for (int i = 0; i < n; i++)
-#define I cin >>
-#define O cout <<
-
-#define SORT(v) sort((v).begin(),(v).end())
-#define pb emplace_back
-#define vi vector<int>
-#define mii map<int, int>
-#define si set<int>
-#define all(p) p.begin(), p.end()
-#define fast                          \
-    ios_base::sync_with_stdio(false); \
-    cin.tie(NULL);
-#define next "\n"
-
+#include<bits/stdc++.h>
 using namespace std;
 
+#define ll long long
 
-void solve()
-{
-  
-}
-
-int main()
-{
-#ifndef ONLINE_JUDGE
+int main() {
+  #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 #endif
-    fast
-        ll tc;
-    I tc;
-    while (tc--)
-    {
-        solve();
-        O endl;
+
+    int test_cases;
+    cin >> test_cases;
+
+    while (test_cases--) {
+        ll n, k;
+        cin >> n >> k;
+
+        vector<ll> a(n), b(n), c(n);
+        for (ll i = 0; i < n; i++)
+            cin >> a[i];
+
+        for (ll i = 0; i < n; i++)
+            cin >> b[i];
+
+        vector<pair<ll, ll>> v;
+        for (ll i = 0; i < n; i++)
+            v.push_back({a[i], i});
+
+        sort(v.begin(), v.end());
+
+        for (ll i = 0; i < n; i++)
+            c[v[i].second] = b[i];
+
+        for (ll i = 0; i < n; i++)
+            cout << c[i] << " ";
+        
+        cout << "\n";
     }
+
     return 0;
 }
