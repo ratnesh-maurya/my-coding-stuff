@@ -1,5 +1,12 @@
 {
-	"files.associations": {
-		"iostream": "cpp"
-	}
+  "files.associations": {
+    "iostream": "cpp"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "python.formatting.provider": "none",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "prettier.requireConfig": true
 }

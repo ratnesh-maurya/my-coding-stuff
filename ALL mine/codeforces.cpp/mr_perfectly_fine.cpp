@@ -1,10 +1,11 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 #define ll long long
 
-int main() {
-  #ifndef ONLINE_JUDGE
+int main()
+{
+#ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 #endif
@@ -12,7 +13,8 @@ int main() {
     int test_cases;
     cin >> test_cases;
 
-    while (test_cases--) {
+    while (test_cases--)
+    {
         ll n, k;
         cin >> n >> k;
 
@@ -35,7 +37,7 @@ int main() {
 
         for (ll i = 0; i < n; i++)
             cout << c[i] << " ";
-        
+
         cout << "\n";
     }
 
