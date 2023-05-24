@@ -28,6 +28,7 @@ int main() {
             v.push_back({a[i], i});
 
         sort(v.begin(), v.end());
+        sort(v.begin(), v.end());
 
         for (ll i = 0; i < n; i++)
             c[v[i].second] = b[i];
